@@ -51,6 +51,10 @@ class MUT_OT_normal_map_nodes(bpy.types.Operator):
                     if mute is None:
                         mute = node.mute
                     node.mute = not mute
+                if isinstance(node, bpy.types.ShaderNodeBump):
+                    if mute is None:
+                        mute = node.mute
+                    node.mute = not mute
         return {"FINISHED"}
 
 
